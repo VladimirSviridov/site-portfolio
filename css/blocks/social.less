@@ -1,0 +1,41 @@
+//main: ../style.less
+
+.social{
+  margin-top: 25px;
+  margin-bottom: 42px;
+  &__link{
+    font-size: 2.73rem;
+    margin-right: 0.5rem;
+
+    &--be{
+      color: #1869ff;
+    }
+    &--dribble {
+      color: #e51a68;
+    }
+    &--linked{
+      color: #007bb6;
+    }
+    &--fb{
+      color: #3a5898;
+    }
+    &--instag{
+      color: #13578a;
+    }
+    &--twitter{
+      color: #56acef;
+    }
+    &--footer{
+      font-size: 1.3rem;
+      color: @light-gray;
+    }
+  }
+}
+
+//hover эффект, чтобы иконки поднимались при наведении
+.fab{
+  &:hover{
+    transition: transform 0.2s linear;
+    transform: translateY(-5px);
+  }
+}

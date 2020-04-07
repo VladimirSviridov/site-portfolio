@@ -1,0 +1,52 @@
+//main: ../style.less
+
+.btn{
+  display: inline-block;
+  min-width: 170px;
+  text-align: center;
+
+  //обнуляем изначальную стилизацию button
+  border: 1px solid @gray;
+  border-radius: 1.8em;
+  //em чтобы размеры кнопки зависели от размера шрифта
+  padding: 1em 1.4em;
+  background: none;
+  cursor: pointer;
+
+  //подключаем к кнопке шрифт (по умолчанию он не наследуется)
+  font-family: inherit;
+  line-height: 0.94;
+  font-size: 1.06rem;
+  color: @black;
+  text-transform: uppercase;
+
+  transition: background-color 0.2s linear,
+              color 0.2s linear,
+              box-shadow 0.2s linear;
+
+  &:focus{
+    outline: none;
+  }
+
+  &:hover{
+    background-color: @black;
+    color: @white;
+    box-shadow: 3.3px 2.3px 8px 0 rgba(0, 0, 0, 0.25);
+  }
+
+  //селектор, проверяющий соседний элемент.
+  //если рядом кнопка - она отодвинется
+  + .btn{
+    margin-left: 1rem;
+  }
+
+  /*Modificators*/
+  &--sm{
+    min-width: 0;
+    font-size: 0.93rem;
+    border: 2px solid @black;
+    line-height: 1.21;
+    letter-spacing: 0.7px;
+    font-weight: bold;
+  }
+}

@@ -1,0 +1,42 @@
+@import "vars";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: @black;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* Blocks */
+@import "blocks/container";
+@import "blocks/intro";
+@import "blocks/header";
+@import "blocks/user";
+@import "blocks/nav";
+@import "blocks/social";
+@import "blocks/btn";
+@import "blocks/works";
+@import "blocks/portfolio";
+@import "blocks/about";
+@import "blocks/reviews";
+@import "blocks/news";
+@import "blocks/footer";
+
+
+/*Helpers*/
+@import "blocks/helpers";

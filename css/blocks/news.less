@@ -1,0 +1,119 @@
+//main: ../style.less
+
+.news {
+  margin-top: 15rem;
+  margin-bottom: 8rem;
+
+  &__header{
+    margin-bottom: 3.5rem;
+  }
+
+  &__title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 0.71;
+    color: @black;
+    text-transform: uppercase;
+    margin-bottom: 1.1rem;
+  }
+  &__text{
+    color: @light-gray;
+    line-height: 1.78;
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+
+  &__footer{
+    text-align: right;
+  }
+
+  &__link{
+    font-size: .94rem;
+    color: @light-gray;
+    text-decoration: underline;
+
+    &:hover{
+      text-decoration: none;
+    }
+  }
+}
+
+.articles{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -1rem;
+
+  &__item {
+    margin-bottom: 2rem;
+  }
+
+  &__col{
+    width: calc(100%/3);
+    padding: 0 1rem;
+  }
+
+  &__header{
+    position: relative;
+    margin-bottom: 1.3rem;
+  }
+
+  &__date{
+    width: 77px;
+    height: 77px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: @white;
+    font-size: 1.06rem;
+    background: @black;
+    text-align: center;
+    line-height: 1.4rem;
+  }
+
+  &__content{
+    margin-bottom: 2rem;
+  }
+
+  &__photo{
+    display: block;
+    max-width: 100%;
+    height: auto;
+  }
+
+  &__title{
+    line-height: 1.2;
+    letter-spacing: 0.9px;
+
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.6rem;
+
+    a{
+      color: inherit;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__cat{
+    font-size: 0.8rem;
+    line-height: 1.33;
+    letter-spacing: 0.6px;
+    color: @gray;
+    margin-bottom: 2rem;
+  }
+
+  &__text{
+    line-height: 2;
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: @light-gray;
+  }
+}

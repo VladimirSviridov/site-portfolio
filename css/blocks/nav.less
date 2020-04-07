@@ -1,0 +1,75 @@
+//main: ../style.less
+
+.nav {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.nav__link{
+  margin-left: 2rem;
+  position: relative;
+
+  font-size: 0.93rem;
+  color: @black;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+
+  //задаем полоску для hover эффекта
+  &:after {
+    content: "";
+    width: 0;
+    height: 2px;
+    background-color: @black;
+
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
+
+    transition: width .2s linear;
+  }
+
+  &:hover:not(.nav__link--btn){
+    &:after{
+      width: 100%;
+    }
+  }
+
+  //Кнопка меню справа
+  &--btn {
+    padding: .7em 1.4em;
+    border: 2px solid @black;
+    border-radius: 1.8em;
+
+    transition:
+            background .2s linear,
+            color .2s linear;
+
+
+    &:hover {
+      background-color: @black;
+      color: @white;
+    }
+
+    &--footer {
+      margin-left: 1.5rem;
+      border: 2px solid @light-gray;
+
+      &:hover {
+        background-color: @light-gray;
+        color: @black;
+      }
+    }
+  }
+
+  &--footer{
+    font-size: .94rem;
+    color: @light-gray;
+
+    &:after {
+      background-color: @light-gray;
+    }
+  }
+
+}

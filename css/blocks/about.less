@@ -1,0 +1,70 @@
+//main: ../style.less
+
+.about{
+  margin: 8rem 0;
+
+  &__inner{
+    display: flex;
+    max-width: 1090px;
+  }
+
+  &__photo,
+  &__content {
+    width: 50%;
+  }
+
+  &__photo{
+    position: relative;
+
+    img{
+      position: relative;
+      z-index: 2;
+    }
+
+    &:before{
+      content: "";
+      height: 413px;
+      width: 413px;
+      background-color: #EFEFEF;
+
+      position: absolute;
+      left: 1rem;
+      bottom: 0;
+      z-index: 1;
+    }
+  }
+
+
+  &__content{
+    margin-top: 2rem;
+    margin-left: 3.2rem;
+  }
+
+  &__title{
+    font-size: 3rem;
+    color: @black;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__bigtitle{
+    font-size: 6.1rem;
+    //чтобы большой заголовок был чуть левее - как в макете
+    position: relative;
+    left: -10px;
+
+    color: fade(@black, 15%);
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.1;
+    margin-bottom: 2.5rem;
+  }
+
+  &__text{
+    line-height: 2;
+    color: @gray;
+    font-weight: 300;
+    font-size: 0.8rem;
+    margin-bottom: 2.8rem;
+  }
+}
