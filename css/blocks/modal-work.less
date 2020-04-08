@@ -1,0 +1,103 @@
+//main: ../style.less
+
+.modal-work{
+  display: flex;
+
+  &__header{
+    margin-bottom: 2.2rem;
+  }
+
+  &__preview {
+    width: 65%;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+
+    transform: translate3d(-50%, -50%, 0);
+  }
+  &__content{
+    width: 35%;
+    padding: 3.4rem 6.6rem 1rem 1.7rem;
+  }
+
+  &__title{
+    font-size: 2.12rem;
+    color: @black;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 0.2rem;
+    position: relative;
+  }
+
+  &__info{
+    font-size: 1.2rem;
+    color: @gray;
+    text-transform: uppercase;
+  }
+
+  &__divider{
+    margin: 0 1rem;
+  }
+
+  &__client{
+    margin-bottom: 2.2rem;
+    &-title{
+      font-size: 1.06rem;
+      color: @black;
+      font-weight: bold;
+      margin-bottom: 0.2rem;
+    }
+    &-company{
+      font-size: .94rem;
+      color: @gray;
+      font-style: italic;
+    }
+  }
+
+  &__text{
+    margin-bottom: 8.66rem;
+
+    font-size: .8rem;
+    color: @gray;
+    line-height: 2;
+    font-weight: lighter;
+  }
+
+  &__footer{
+    position: absolute;
+    bottom: 0;
+    left: 780px;
+    z-index: 1;
+    width: 35%;
+
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1.8rem 1rem;
+
+  }
+
+  &__btn{
+    font-size: .94rem;
+    color: @black;
+    text-transform: uppercase;
+
+    font-family: inherit;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+    border: 0;
+
+
+  }
+}
+
+.fas{
+  margin: 0 1rem;
+  font-size: 0.94rem;
+}

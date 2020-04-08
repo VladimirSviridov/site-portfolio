@@ -9,7 +9,7 @@
     <script crossorigin="anonymous" src="https://kit.fontawesome.com/0716044f05.js"></script>
     <title>Portfolio</title>
 </head>
-<body>
+<body class="no-scroll">
 
 <header class="header">
     <div class="container">
@@ -344,6 +344,42 @@
         </div>
     </div>
 </footer>
+
+<!--Modals-->
+<div class="modal">
+    <div class="modal__dialog">
+
+        <button type="button" class="modal__close"><i class="fas fa-times-circle"></i></button>
+
+        <div class="modal-work">
+            <div class="modal-work__preview">
+                <img class="modal-work__photo" src="https://placehold.it/790x800" alt="preview">
+            </div>
+            <div class="modal-work__content">
+                <header class="modal-work__header">
+                    <h3 class="modal-work__title">project title</h3>
+                    <div class="modal-work__info">category <span class="modal-work__divider" >|</span> 2020</div>
+                </header>
+                <div class="modal-work__client">
+                    <div class="modal-work__client-title">Client:</div>
+                    <div class="modal-work__client-company">Creative Agency</div>
+                </div>
+                <div class="modal-work__text">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad harum ipsa nisi nobis quaerat quas quo quos ratione recusandae voluptates! Ab accusamus commodi distinctio dolores itaque odit sit, temporibus? Assumenda.</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore eligendi itaque iure magni molestiae perferendis quod voluptas? Ab debitis dolore doloremque doloribus ducimus eligendi, natus odio quidem repellat, unde ut.</p>
+                </div>
+                <footer class="modal-work__footer">
+                    <button type="button" class="modal-work__btn modal-work__prev"><i class="fas fa-chevron-left"></i>previous</button>
+                    <button type="button" class="modal-work__btn modal-work__next">next<i class="fas fa-chevron-right"></i></button>
+                </footer>
+            </div>
+
+        </div>
+
+
+    </div>
+</div>
+
 
 </body>
 </html>

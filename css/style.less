@@ -16,7 +16,13 @@ body {
   font-family: 'Montserrat', sans-serif;
   font-size: 1rem;
   color: @black;
+
+  &.no-scroll{
+    overflow: hidden;
+  }
 }
+
+
 
 a {
   text-decoration: none;
@@ -36,6 +42,8 @@ a {
 @import "blocks/reviews";
 @import "blocks/news";
 @import "blocks/footer";
+@import "blocks/modal";
+@import "blocks/modal-work";
 
 
 /*Helpers*/
