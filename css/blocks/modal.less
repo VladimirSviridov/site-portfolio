@@ -3,7 +3,7 @@
 .modal{
   width: 100%;
   height: 100%;
-  display: flex;
+  display: none;
   padding: 1rem;
   overflow: auto;
 
@@ -14,14 +14,24 @@
   left: 0;
   z-index: 100;
 
+  &.show{
+    display: flex;
+  }
+
   &__dialog{
     width: 100%;
     max-width: 1200px;
     margin: auto;
     position: relative;
 
+    transform: rotateX(90deg);
+    transition: transform 0.2s linear;
 
     background-color: white;
+
+    &--sm {
+      max-width: 900px;
+    }
   }
 
   &__close{
@@ -43,8 +53,27 @@
 
     }
   }
+  &__content{
+    padding: 5rem 1rem ;
+  }
+
+  &__title{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: @black;
+    font-weight: bold;
+    margin-bottom: 3.6rem;
+  }
+
+  &__subtitle {
+    text-transform: uppercase;
+    font-size: 1.06rem;
+    color: @black;
+    font-weight: normal;
+  }
 }
 
-.fas{
+.fa-times-circle{
+  margin: 1rem 1rem;
   font-size: 1.9rem;
 }
