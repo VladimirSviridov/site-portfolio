@@ -2,8 +2,28 @@
 
 .nav {
   display: flex;
+  flex-wrap: wrap;
   height: 100%;
   align-items: center;
+
+  @media @mobile {
+    position: absolute;
+    height: auto;
+    padding: 1rem;
+    top: 100%;
+    right: 0;
+    z-index: 100;
+    
+    background-color: @white;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3 );
+    text-align: center;
+
+    display: none;
+
+    &.show{
+      display: flex;
+    }
+  }
 }
 .nav__link{
   margin-left: 2rem;
@@ -14,6 +34,11 @@
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
+
+  @media @mobile{
+    width: 100%;
+    margin-left: 0;
+  }
 
   //задаем полоску для hover эффекта
   &:after {
@@ -33,6 +58,8 @@
   &:hover:not(.nav__link--btn){
     &:after{
       width: 100%;
+      margin-right: 0;
+      padding: .5rem 1rem;
     }
   }
 
@@ -56,6 +83,7 @@
       margin-left: 1.5rem;
       border: 2px solid @light-gray;
 
+
       &:hover {
         background-color: @light-gray;
         color: @black;
@@ -66,6 +94,10 @@
   &--footer{
     font-size: .94rem;
     color: @light-gray;
+
+    @media @tablet{
+      margin: 0 .5rem .5rem;
+    }
 
     &:after {
       background-color: @light-gray;

@@ -12,6 +12,14 @@
     //Чтобы каждый элемент занимал треть контейнера по ширине
     flex-basis: calc(100%/3);
     padding: 1rem;
+
+    @media @mobile{
+      flex-basis: 50%;
+    }
+
+    @media @mobile-sm {
+      flex-basis: 100%;
+    }
   }
   &__item{
     //overflow скрое контент вылезающий за пределы блока
@@ -23,6 +31,11 @@
 
     &:hover{
       box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.25);
+    }
+
+    @media @mobile{
+      max-width: 370px;
+      margin: 0 auto;
     }
 
     & img{

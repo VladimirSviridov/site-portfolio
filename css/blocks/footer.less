@@ -6,12 +6,24 @@
 
   &__inner{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
   }
 
   &__credits{
     display: flex;
     align-items: center;
+
+
+    @media @tablet {
+      width: 100%;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    @media @mobile-sm{
+      flex-direction: column;
+    }
   }
 
   &__copiright{
@@ -21,5 +33,22 @@
     margin-right: .8rem;
 
     border-right: 1px solid @light-gray;
+
+    @media @mobile-sm{
+      margin-right: 0;
+      margin-bottom: 1rem;
+      border-right: 0;
+    }
+  }
+
+  &__nav{
+    @media @tablet {
+      flex-wrap: wrap;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
   }
 }

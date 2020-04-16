@@ -9,6 +9,15 @@
 
   position: relative;
 
+  @media @mobile-760{
+    margin: 3rem auto;
+  }
+
+  @media @mobile-xsm{
+    margin: 2rem auto 0;
+    flex-direction: column;
+  }
+
   &:before{
     content: "";
     display: block;
@@ -21,24 +30,63 @@
     top: 0;
     left: 50%;
     z-index: 1;
+
+    @media @mobile-xsm{
+      display: none;
+    }
   }
 
   &__col{
     width: 50%;
 
+    @media @mobile-xsm{
+      width: 100%;
+      margin-bottom: 1.5rem;
+    }
+
     &--left{
       text-align: right;
       padding-right: 3.2rem;
+
+      @media @mobile-760{
+        padding-right: 2rem;
+      }
+
+      @media @mobile-sm{
+        padding-right: 1rem;
+      }
+
+      @media @mobile-xsm{
+        text-align: center;
+        padding-right: 0;
+      }
     }
 
     &--right{
       padding-left: 3.2rem;
+
+      @media @mobile-760{
+        padding-left: 2rem;
+      }
+
+      @media @mobile-sm{
+        padding-left: 1rem;
+      }
+
+      @media @mobile-xsm{
+        text-align: center;
+        padding-left: 0;
+      }
     }
 
   }
 
   &__item{
     margin-bottom: 2.6rem;
+
+    @media @mobile-760{
+      margin-bottom: 1.5rem;
+    }
 
     &:last-child{
       margin-bottom: 0;
@@ -51,6 +99,10 @@
     text-transform: uppercase;
     font-weight: 700;
     margin-bottom: 2.6rem;
+
+    @media @mobile-760{
+      margin-bottom: 1.5rem;
+    }
   }
 
   &__date{
@@ -88,6 +140,14 @@
   flex-direction: column;
   margin-bottom: 2.6rem;
 
+  @media @mobile-760{
+    margin-bottom: 1.5rem;
+  }
+
+  @media @mobile-xsm{
+    align-items: center;
+  }
+
   &__item{
     display: flex;
     align-items: center;
@@ -111,7 +171,17 @@
     width: 139px;
     height: 6px;
     background-color: #EFEFEF;
+
+    @media @mobile-l{
+      width: 90px;
+    }
+    @media @mobile-sm{
+      width: 70px;
+    }
+
   }
+
+
   &__progress{
     height: 100%;
     background-color: @light-gray;

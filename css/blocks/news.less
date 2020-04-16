@@ -4,8 +4,19 @@
   margin-top: 15rem;
   margin-bottom: 8rem;
 
+  @media @mobile-760{
+    margin-top: 13rem;
+    margin-bottom: 5rem;
+  }
+
   &__header{
     margin-bottom: 3.5rem;
+
+    @media @mobile-760{
+      max-width: 370px;
+      margin: 0 auto 2rem;
+    }
+
   }
 
   &__title {
@@ -15,6 +26,11 @@
     color: @black;
     text-transform: uppercase;
     margin-bottom: 1.1rem;
+
+
+    @media @mobile-760{
+      font-size: 2.5rem;
+    }
   }
   &__text{
     color: @light-gray;
@@ -45,11 +61,20 @@
 
   &__item {
     margin-bottom: 2rem;
+
+    @media @mobile-760{
+      max-width: 370px;
+      margin: 0 auto 2rem;
+    }
   }
 
   &__col{
     width: calc(100%/3);
     padding: 0 1rem;
+
+    @media @mobile-760 {
+      width: 100%;
+    }
   }
 
   &__header{

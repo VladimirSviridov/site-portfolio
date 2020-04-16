@@ -1,5 +1,11 @@
 //main: ../style.less
 
+.intro{
+  @media @mobile{
+    margin-top: 100px;
+  }
+}
+
 .intro__inner {
   display: flex;
   //в less fade используется для осветления цвета 30% - процент яркости
@@ -9,13 +15,27 @@
 .intro__content {
   margin-top: 100px;
   margin-bottom: 108px;
-  width: 50%;
+  flex-grow: 1;
+
+  @media @tablet {
+    margin-top: 33px;
+    margin-bottom: 33px;
+  }
+
+
+  @media @mobile-sm {
+    width: 100%;
+  }
 }
 
 .intro__subtitle {
   font-size: 2.13rem;
   color: @black;
   font-weight: 200;
+
+  @media @mobile-760 {
+    font-size: 2rem;
+  }
 }
 
 .intro__title {
@@ -23,6 +43,10 @@
   color: @black;
   font-weight: bold;
   margin-bottom: 5px;
+
+  @media @mobile-760 {
+    font-size: 2.5rem;
+  }
 }
 
 .intro__text{
@@ -34,5 +58,19 @@
   width: 50%;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
+  z-index: -1;
+
+  @media @tablet {
+    width: 45%;
+    img {
+      width: 350px;
+      height: 350px;
+    }
+  }
+
+  @media @mobile-sm {
+    display: none;
+  }
 }
 
